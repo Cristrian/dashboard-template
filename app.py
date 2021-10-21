@@ -6,7 +6,7 @@ import dash_bootstrap_components as dbc
 #Local Imports
 import callbacks
 from layouts import board_layout
-from layouts import dash_imperiums_components as dic
+from layouts import dash_local_components as dlc
 from data import data
 
 
@@ -20,13 +20,13 @@ n_pages = 3
 #Layouts definition
 live_layout = [
     html.Div(board_layout.gen_layout('live')),
-    html.Div(dic.gen_download_button('live-down-btn', 'live-download-dataframe')),
+    html.Div(dlc.gen_download_button('live-down-btn', 'live-download-dataframe')),
     html.Div(dbc.Pagination(id='live-pagination', max_value=n_pages, active_page=1))
     ]
 
 picture_layout = [
     html.Div(board_layout.gen_layout('pic')),
-    html.Div(dic.gen_download_button('pic-down-btn', 'pic-download-dataframe')),
+    html.Div(dlc.gen_download_button('pic-down-btn', 'pic-download-dataframe')),
     html.Div(dbc.Pagination(id='pic-pagination', max_value=n_pages, active_page=1))
     ]
 
@@ -45,4 +45,3 @@ app.layout = html.Div([
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-    

@@ -2,7 +2,7 @@ from dash import html, dcc
 import dash_bootstrap_components as dbc
 
 #Local Imports
-from layouts import dash_imperiums_components as dic
+from layouts import dash_local_components as dlc
 from data import data
 
 def gen_layout(appname):
